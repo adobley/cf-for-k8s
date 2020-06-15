@@ -94,8 +94,6 @@ variables:
   type: password
 - name: capi_db_password
   type: password
-- name: uaa_db_password
-  type: password
 - name: uaa_admin_client_secret
   type: password
 - name: uaa_encryption_key_passphrase
@@ -270,8 +268,6 @@ metric_proxy:
     key: $( bosh interpolate ${VARS_FILE} --path=/metric_proxy/private_key | base64 | tr -d '\n' )
 
 uaa:
-  database:
-    password: $(bosh interpolate ${VARS_FILE} --path=/uaa_db_password)
   admin_client_secret: $(bosh interpolate ${VARS_FILE} --path=/uaa_admin_client_secret)
   jwt_policy:
     signing_key: |

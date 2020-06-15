@@ -24,8 +24,6 @@ database:
   address: #@ uaa_db_host()
   port: #@ data.values.uaa.database.port
   name: #@ data.values.uaa.database.name
-  username: #@ data.values.uaa.database.user
-  password: #@ data.values.uaa.database.password
 
 namespace: #@ data.values.system_namespace
 

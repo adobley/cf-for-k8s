@@ -66,6 +66,8 @@ database:
   logabandoned: true
   abandonedtimeout: 300
   url: #@ database_connection_string(data.values.database)
+  username: uaa
+  password: ${UAADB_PASSWORD}
 
 smtp:
   host: #@ data.values.smtp.host

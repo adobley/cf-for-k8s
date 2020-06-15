@@ -40,6 +40,11 @@ spec:
           value: #@ config_dir
         - name: SECRETS_DIR
           value: #@ secrets_dir
+        - name: UAADB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: password
+              name: cf-uaa-db-password
         volumeMounts:
         - name: uaa-config
           mountPath: #@ config_dir

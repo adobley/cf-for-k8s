@@ -103,6 +103,11 @@ spec:
             secretKeyRef:
               key: postgresql-password
               name: cf-db-admin-secret
+        - name: UAADB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: password
+              name: cf-uaa-db-password
         - name: POSTGRESQL_ENABLE_LDAP
           value: "no"
         image: index.docker.io/bitnami/postgresql@sha256:9762d9a80b90a5efe299d4848057ac5c45fb384570b36f60aad38fe2b1704bd6
